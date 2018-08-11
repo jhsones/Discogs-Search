@@ -4,7 +4,7 @@ import config
 
 def search(q):
     q = q.replace(' ', '+')
-    url = "https://api.discogs.com/database/search?q=" + q + "&type=master&token=" + config.TOKEN
+    url = "https://api.discogs.com/database/search?q=" + q + "&type=master&token=" + config.api_token
     json_obj = urllib2.urlopen(url)
     return json.load(json_obj)
 
